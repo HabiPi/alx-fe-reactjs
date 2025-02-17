@@ -23,9 +23,6 @@ function App() {
       <UserProfile name="Charlie" age="22" bio="Passionate about music and art" />
       <Footer />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
