@@ -5,9 +5,8 @@ import UserProfile from './components/UserProfile';
 import Footer from './components/Footer';
 
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Counter from './components/Counter';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +20,7 @@ function App() {
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <UserProfile name="Bob" age="30" bio="Enjoys coding and gaming" />
       <UserProfile name="Charlie" age="22" bio="Passionate about music and art" />
+      <Counter />
       <Footer />
       </div>
     </>
