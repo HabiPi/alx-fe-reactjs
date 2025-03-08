@@ -7,7 +7,7 @@ const AddRecipeForm = () => {
     const [ingredients, setIngredients] = useState("");
     const [instructions, setInstructions] = useState("");
 
-    const hundleSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         if (title && ingredients && instructions) {
             addRecipe({ title, ingredients, instructions });
@@ -28,7 +28,7 @@ const AddRecipeForm = () => {
                     <input type="text"
                         id="title"
                         value={title}
-                        onChange={(e) => setTitle(e.target.value)} reqyuired
+                        onChange={(e) => setTitle(e.target.value)} required
                     />
                 </div>
                 <div>
