@@ -10,10 +10,11 @@ const RecipeList = () => {
 
     return (
         <div>
-            <h2>recipes</h2>
+            <h2>Recipes</h2>
             <ul>
                 {recipes.map((recipe, index) => (
-                    <li key={index}><h3>{recipe.title}</h3>
+                    <li key={index}>
+                        <h3>{recipe.title}</h3>
                         <p>Ingredients: {recipe.ingredients}</p>
                         <p>Instructions: {recipe.instructions}</p>
                     </li>
