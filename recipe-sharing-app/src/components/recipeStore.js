@@ -11,7 +11,7 @@ const useRecipeStore = create(set => ({
     })),
     updatedRecipe: (updatedRecipe) => set(state => ({
         recipes: state.recipes.maps(recipe => recipe.id === updatedRecipe.id ? updatedRecipe : recipe)
-    }));
+    })),
     setRecipes: (recipes) => set({ recipes })
 }));
 
