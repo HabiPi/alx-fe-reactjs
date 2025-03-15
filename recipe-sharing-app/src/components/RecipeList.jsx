@@ -1,6 +1,6 @@
 import { useRecipeStore } from '../recipeStore';
 
-const RecipeList = () => {
+const RecipeList = ({ onRecipeClick }) => {
   const recipes = useRecipeStore((state) => state.recipes);
 
   return (

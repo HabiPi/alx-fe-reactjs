@@ -1,14 +1,23 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
+import RecipeDetails from './components/RecipeDetails';
+
 
 function App() {
+  const [selectedRecipeId, setSelectedRecipeId] = useState(null);
+
+  const handleRecipeClick = (id) => {
+    setSelectedRecipeId(id);
+  }
+
   return (
     <div className="App">
       <h1>Recipe Sharing App</h1>
       <AddRecipeForm />
-      <RecipeList />
+      <RecipeList onRecipeClick={handleRecipeClick} />
+      {selectdRecipeId && <RecipeDetails recipeId={selectedRecipeId} />}
     </div>
   );
 }
