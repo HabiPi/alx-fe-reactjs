@@ -13,12 +13,24 @@ function App() {
   }
 
   return (
+    <Router>
     <div className="App">
       <h1>Recipe Sharing App</h1>
-      <AddRecipeForm />
-      <RecipeList onRecipeClick={handleRecipeClick} />
-      {selectedRecipeId && <RecipeDetails recipeId={selectedRecipeId} />}
+      <Routes>
+      <Route
+        path="/"
+        element={
+          <div>
+            <AddRecipeForm />
+            <RecipeList onRecipeClick={handleRecipeClick} />
+            {selectedRecipeId && <RecipeDetails recipeId={selectedRecipeId} />}
+          </div>
+        }
+      />
+      <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+      </Routes>
     </div>
+    </Router>
   );
 }
 
