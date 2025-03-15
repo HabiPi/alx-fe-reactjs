@@ -17,7 +17,7 @@ function App() {
       <h1>Recipe Sharing App</h1>
       <AddRecipeForm />
       <RecipeList onRecipeClick={handleRecipeClick} />
-      {selectdRecipeId && <RecipeDetails recipeId={selectedRecipeId} />}
+      {selectedRecipeId && <RecipeDetails recipeId={selectedRecipeId} />}
     </div>
   );
 }
